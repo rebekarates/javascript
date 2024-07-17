@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulção de dados</title>
+    <style>
+        body{
+            background-color: pink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1>
+    <p>já me livrei da maldição</p>   
+<script>
+    var n1 = Number(window.prompt('Digite um número:'))
+    var n2 = Number(window.prompt('Digite outro número'))
+    var soma = n1 + n2
+    alert('A soma dos números é: '+ soma)
+   
+    /*observações importantes nesse exercício
+    1- Todos os valores recebidos pelo window.prompt, são lidos pelo JavaScript com uma String.
+    2- O sinal de mais (+) tem função de concatenação sem a devida conversão, ou seja, no exemplo acima, sem a manipulação dos dados, era mostrado e junção dos valores recebidos, e não a soma entre eles. ex 3 + 4 = 34 e não 7.
+    3- Para que a String, seja entedida como um numero pelo JavaScript, é necessária uma conversão.
+    feita da seguinte forma:
+    
+    A-> Number.parseInt(window.prompt)
+    para convesão de string em numero inteiro.
+    
+    B->Number.parseFloat(Window.prompt)
+    para conversão de string em Numero real
+    
+    C->Number(window.prompt)
+    que é a forma simplificada, nela o propio Javascript vai identificar qual tipo de número foi recebido.  
+    */
+</script>
+</body>
+</html>
