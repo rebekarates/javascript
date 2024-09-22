@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução ao DOM</title>
+    <style>
+        body{
+            background-color: rgb(52, 173, 163);
+            color: white;
+            font: normal 15pt arial ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var corpo= window.document.body
+        corpo.style.background='pink'  
+        var p1= window.document.getElementsByTagName('p')[1] //selecionando por nome da TAG
+        window.document.write('Está escrito assim:  '+ p1.innerHTML)//Aqui o Innertext, que mostra o texto dentro, foi substituído pelo InnerHTML que além de mostrar o texto dentro, ainda mostra as formatações feitas no texto.
+        p1.style.color='blue'//uma alteração pontual no estilo
+        var d= window.document.getElementById('msg')//selecionando por ID, o mesmo que coloco dentro da tag em HTML E CSS.
+        d.style.background='green'
+        //vai alterar o testo que está dentro da tag com esse ID
+        /*d.innerHTML='Estou aguardando' outra forma de alterar o texto é
+        window.document.getElementById('msg').innerText='olá'*/
+        var d=window.document.querySelector('div#msg')
+        d.style.background='blue'
+
+
+    </script>
+</body>
+</html> 
