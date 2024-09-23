@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt arial;
+            background-color: orange;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()", outra forma de ultilizar os eventos, é colocando os comandos dentro da abertura da TAg aqui dentro do HTML, porém é mais indicado a forma feita dentro do JS-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+        interaja...
+    </div>
+   
+    <script> 
+          var a= window.document.getElementById('area')
+          a.addEventListener('click', clicar)
+          a.addEventListener('onmouseenter', entrar)
+          a.addEventListener('onmouseout', sair)
+          
+          /*Pra não poluir meu HTML usei o a.addEventListener, o (a) antes do ponto se refere a variável criada pra receber o valor da DIV*/
+          
+          function clicar(){
+           a.innerText='clicou!'
+           a.style.background= 'red'
+          }
+          function entrar(){
+            a.innerText='Entrou!'
+          }
+          function sair(){
+            a.innerText='Saiu!'
+           a.style.background= 'orange'
+          }
+    </script>
+</body>
+</html>
