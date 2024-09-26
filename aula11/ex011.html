@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+        }
+        input#pais{
+            height: 40px;
+            width: 300px;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Digite de qual País você é:</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="result"></div>
+
+    <script>
+        function clicar(){
+            var loc =window.document.querySelector('input#pais')
+            var res=window.document.querySelector('div#result')
+            var loc=String(loc.value)
+            if(loc =='Brasil'){
+                res.innerHTML=`Você é do ${loc}, é BRASILEIRO`
+            }
+            else{
+                res.innerHTML=`Você é de/o ${loc}, é ESTRANGEIRO`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -4,5 +4,5 @@ if(pais=='Brasil'){
     console.log('Você é Brasileiro')
 }
 else{
-    console.log('VocÊ é mexicano? tá preso')
+    console.log('dirij-se a alfandega')
 }
