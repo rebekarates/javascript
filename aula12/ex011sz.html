@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio aula 12</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+        }
+        input#idad{
+            height: 30px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite sua idade abaixo</h1>
+    <input type="number" name="idad" id="idad">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="resp"></div>
+    
+    
+    <script>
+        function clicar(){
+            var ida=window.document.querySelector('input#idad')
+            var resposta=window.document.querySelector('div#resp')
+            var idade=Number(ida.value)
+            resposta.innerHTML=`<p>Você tem ${idade} anos</p>`
+            if(idade<16){
+                resposta.innerHTML+='<p>Seu voto não é obrigatório</p>'
+            } else if(idade<18 || idade >65){ 
+                resposta.innerHTML+='<p> Seu voto é Opcional</p>'
+            } else if(idade >18) {
+                resposta.innerHTML+='<p> Seu voto é obrigatório'
+            }
+     }
+    </script>
+</body>
+</html>
